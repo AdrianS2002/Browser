@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3kW-3u-cMd">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="4"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="pEe-zm-0AQ">
+            <objects>
+                <viewController id="3kW-3u-cMd" customClass="WebViewController" customModule="WebViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bIn-ed-6hV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1g-ek-2NI">
+                                <rect key="frame" x="0.0" y="59" width="62" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onBackPressed:" destination="3kW-3u-cMd" eventType="touchUpInside" id="upo-U8-XeW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dp7-Zm-YcN">
+                                <rect key="frame" x="62" y="59" width="87" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Forward">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onForwardPressed:" destination="3kW-3u-cMd" eventType="touchUpInside" id="xTF-VQ-SDm"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dyH-lU-boW">
+                                <rect key="frame" x="20" y="114" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbF-oC-jsf">
+                                <rect key="frame" x="339" y="59" width="54" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="GO!">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onGoPressed:" destination="3kW-3u-cMd" eventType="touchUpInside" id="jgD-Ur-uIq"/>
+                                </connections>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xmh-BA-NdJ">
+                                <rect key="frame" x="0.0" y="148" width="393" height="704"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sne-6r-NA8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sne-6r-NA8" firstAttribute="trailing" secondItem="UbF-oC-jsf" secondAttribute="trailing" id="4NO-SD-KL8"/>
+                            <constraint firstItem="dp7-Zm-YcN" firstAttribute="top" secondItem="sne-6r-NA8" secondAttribute="top" id="8I9-xO-VEM"/>
+                            <constraint firstItem="dyH-lU-boW" firstAttribute="leading" secondItem="sne-6r-NA8" secondAttribute="leading" constant="20" id="CEQ-gs-a9b"/>
+                            <constraint firstItem="W1g-ek-2NI" firstAttribute="leading" secondItem="sne-6r-NA8" secondAttribute="leading" id="FKU-wV-KyL"/>
+                            <constraint firstItem="Xmh-BA-NdJ" firstAttribute="leading" secondItem="sne-6r-NA8" secondAttribute="leading" id="JO6-F3-RNo"/>
+                            <constraint firstItem="sne-6r-NA8" firstAttribute="trailing" secondItem="dyH-lU-boW" secondAttribute="trailing" constant="20" id="RZN-yd-1PS"/>
+                            <constraint firstItem="sne-6r-NA8" firstAttribute="trailing" secondItem="Xmh-BA-NdJ" secondAttribute="trailing" id="UKh-dA-ISo"/>
+                            <constraint firstItem="UbF-oC-jsf" firstAttribute="top" secondItem="sne-6r-NA8" secondAttribute="top" id="Xu5-td-kUu"/>
+                            <constraint firstAttribute="bottom" secondItem="Xmh-BA-NdJ" secondAttribute="bottom" id="b50-Y4-1rK"/>
+                            <constraint firstItem="dyH-lU-boW" firstAttribute="top" secondItem="W1g-ek-2NI" secondAttribute="bottom" constant="20" id="inB-VZ-wjL"/>
+                            <constraint firstItem="dp7-Zm-YcN" firstAttribute="leading" secondItem="W1g-ek-2NI" secondAttribute="trailing" id="k48-V1-qK3"/>
+                            <constraint firstItem="W1g-ek-2NI" firstAttribute="top" secondItem="sne-6r-NA8" secondAttribute="top" id="mpT-r2-uR0"/>
+                            <constraint firstItem="Xmh-BA-NdJ" firstAttribute="top" secondItem="dyH-lU-boW" secondAttribute="bottom" id="nkV-nL-dNa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="urlTextField" destination="dyH-lU-boW" id="G7Y-vq-cKf"/>
+                        <outlet property="webView" destination="Xmh-BA-NdJ" id="f3t-4Y-BDa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aRT-hg-9t8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1119.8473282442749" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
